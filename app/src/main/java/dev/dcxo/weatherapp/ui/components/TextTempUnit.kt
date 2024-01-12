@@ -29,7 +29,7 @@ fun TextTempUnit(
     textStyle: TextStyle = TextStyle.Default,
     localeOverride: ULocale? = null,
     unitModifier: Modifier = Modifier,
-    unitTextStyle: TextStyle = TextStyle.Default
+    unitTextStyle: TextStyle = textStyle
 ) {
     if (content.isNullOrBlank()) return
 

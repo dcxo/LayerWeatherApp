@@ -40,7 +40,7 @@ fun Layer(
     content: @Composable () -> Unit
 ) {
 
-    Box {
+    Box(modifier = modifier) {
         Surface(
             shape = if (pointsLeft) PointLeftTriangleShape else PointRightTriangleShape,
             color = color,
@@ -51,8 +51,7 @@ fun Layer(
             modifier = Modifier
                 .rotate(45f * if (pointsLeft) -1 else 1)
                 .size(size)
-                .offset(0.dp, (-size / 2))
-                .then(modifier),
+                .offset(0.dp, (-size / 2)),
             content = content
         )
     }
